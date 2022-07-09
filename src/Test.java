@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Author : Created by lity25
- * @Date : 2022/2/25 9:55
+ * @Date  : 2022/2/25 9:55
  * @Description :
  */
 public class Test {
@@ -91,6 +91,11 @@ public class Test {
         void test() {
             System.out.println("dsfgsdgd");
         }
+    }
+
+    @Data
+    class Cat{
+
     }
 
 
