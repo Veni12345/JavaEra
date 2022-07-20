@@ -54,15 +54,15 @@ public class ReflectDemo {
         String value = "wiwi";  //属性内容
         //调用无参构造实例化
         //1.任何情况下想要保存类中的属性或者调用类中的方法都必须保证有实例化对象，既然不允许导入包，那么就反射实例化
-        Object o = aClass.getDeclaredConstructor().newInstance();
+        Object object = aClass.getDeclaredConstructor().newInstance();
         //2.如果进行方法的调用，就要获取方法的名称
         String setMethodName = "setCatName";
         Method setMethod = aClass.getDeclaredMethod(setMethodName, String.class);
-        setMethod.invoke(o, value); //等价于Cat.setCatName(value)
+        setMethod.invoke(object, value); //等价于Cat.setCatName(value)
 
         String getCatName = "getCatName";
         Method getMethod = aClass.getDeclaredMethod(getCatName);
-        System.out.println(getMethod.invoke(o));
+        System.out.println(getMethod.invoke(object));
 
 
     }
