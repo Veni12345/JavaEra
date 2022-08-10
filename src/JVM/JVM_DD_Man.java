@@ -1,3 +1,4 @@
+package JVM;
 
 public class JVM_DD_Man extends JVM_DD_Human {
     @Override

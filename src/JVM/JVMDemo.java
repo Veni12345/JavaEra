@@ -1,3 +1,5 @@
+package JVM;
+
 public class JVMDemo {
     static {
         i=0;
