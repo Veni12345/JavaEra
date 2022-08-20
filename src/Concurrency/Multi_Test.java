@@ -1,3 +1,5 @@
+package Concurrency;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Lock;
@@ -10,9 +12,9 @@ public class Multi_Test {
         //CachedThreadPool: 一个任务创建一个线程
 //        ExecutorService executorService = Executors.newCachedThreadPool();
 //        for (int i = 0; i < 5; i++) {
-//            executorService.execute(new MyRunnable() {
+//            executorService.execute(new Concurrency.MyRunnable() {
 //                public void run() {
-//                    System.out.println("MyRunnable run...");
+//                    System.out.println("Concurrency.MyRunnable run...");
 //                }
 //            });
 //        }
@@ -25,6 +27,6 @@ public class Multi_Test {
 class MyRunnable implements Runnable {
     @Override
     public void run() {
-        System.out.println("MyRunnable run...");
+        System.out.println("Concurrency.MyRunnable run...");
     }
 }

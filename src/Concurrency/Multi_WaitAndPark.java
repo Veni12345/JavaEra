@@ -1,6 +1,5 @@
-import java.util.concurrent.locks.LockSupport;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+package Concurrency;
+
 import java.util.concurrent.locks.LockSupport;
 
 /**
@@ -11,7 +10,7 @@ import java.util.concurrent.locks.LockSupport;
  */
 public class Multi_WaitAndPark {
     public static void main(String[] args) {
-        /*MyThread1 myThread = new MyThread1();
+        /*Concurrency.MyThread1 myThread = new Concurrency.MyThread1();
         synchronized (myThread) {
             try {
                 myThread.start();
@@ -36,7 +35,7 @@ public class Multi_WaitAndPark {
 
 
         /*//park()中断
-        MyThread3 myThread2 = new MyThread3(Thread.currentThread());
+        Concurrency.MyThread3 myThread2 = new Concurrency.MyThread3(Thread.currentThread());
         myThread2.start();
         System.out.println("before park");
         // 获取许可

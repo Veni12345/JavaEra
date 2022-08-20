@@ -1,3 +1,5 @@
+package Concurrency;
+
 import lombok.SneakyThrows;
 
 /**
@@ -7,9 +9,9 @@ public class Multi_NumCountDemo {
     public static void main(String[] args) {
         Resource resource = new Resource();
         AddThread addThread1 = new AddThread(resource);
-//        AddThread addThread2= new AddThread(resource);
+//        Concurrency.AddThread addThread2= new Concurrency.AddThread(resource);
         SubThread subThread1 = new SubThread(resource);
-//        SubThread subThread2= new SubThread(resource);
+//        Concurrency.SubThread subThread2= new Concurrency.SubThread(resource);
         new Thread(addThread1, "加法线程1").start();
         new Thread(addThread1, "加法线程2").start();
         new Thread(subThread1, "减法线程1").start();
