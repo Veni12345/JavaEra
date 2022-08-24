@@ -1,5 +1,9 @@
 package JVM;
 
+import java.net.URLClassLoader;
+import java.security.SecureClassLoader;
+import java.util.concurrent.ConcurrentMap;
+
 public class JVMDemo {
     static {
         i=0;
@@ -9,5 +13,9 @@ public class JVMDemo {
 
     public static void main(String[] args) {
         JVMDemo jvmDemo=new JVMDemo();
+
+
+        //
+//        Class.forName()
     }
 }
