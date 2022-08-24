@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Locale;
+import java.util.Objects;
+
 /**
  * @author: Veni
  * @date: 2022/06/28 六月 星期二 10:41
@@ -48,4 +51,20 @@ public class Dog implements Cloneable, Comparable<Dog> {
 //    public int hashCode() {
 //        return Objects.hash(concernFromId.toUpperCase(),concernToId.toUpperCase());
 //    }
+
+
+    //重写equal和hashCode，名字相同则相等
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass())
+            return false;
+        Dog newDog = (Dog) object;
+        return name.equalsIgnoreCase(newDog.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name.toUpperCase(Locale.ROOT));
+    }
 }

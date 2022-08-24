@@ -13,6 +13,31 @@ import java.util.concurrent.TimeUnit;
  */
 public class Demo<T> {
     public static void main(String[] args) {
+        /** hashCode */
+        Object o = new Object();
+        System.out.println(o);
+        System.out.println(o.hashCode());
+        System.out.println(Integer.toHexString(o.hashCode()));  //转16进制
+        System.out.println(new Dog().hashCode());
+        System.out.println(System.identityHashCode(o));   //不过和 Object.hashcode 不同的是，该方法会无视重写的hashcode
+        /** hashCode生成方法 */
+        /*  通过当前状态值进行异或（XOR）运算
+        else {
+            // Marsaglia's xor-shift scheme with thread-specific state
+            // This is probably the best overall implementation -- we'll
+            // likely make this the default in future releases.
+            unsigned t = Self->_hashStateX ;
+            t ^= (t << 11) ;
+            Self->_hashStateX = Self->_hashStateY ;
+            Self->_hashStateY = Self->_hashStateZ ;
+            Self->_hashStateZ = Self->_hashStateW ;
+            unsigned v = Self->_hashStateW ;
+            v = (v ^ (v >> 19)) ^ (t ^ (t >> 8)) ;
+            Self->_hashStateW = v ;
+            value = v ;
+        } */
+
+
         /**
          * boolean中if赋值
          */
