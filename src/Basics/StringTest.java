@@ -16,6 +16,11 @@ public class StringTest {
         boolean b2 = b.startsWith(c);
         boolean b3 = b.startsWith(d);
         System.out.println(b1+" "+b2+" "+b3);
+
+
+        String fi="MA_034";
+        String[] s = fi.split("_");
+        System.out.println(s);
     }
 
 
