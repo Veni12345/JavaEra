@@ -13,12 +13,12 @@ import java.util.concurrent.TimeUnit;
  */
 public class Demo<T> {
     public static void main(String[] args) {
-        /** hashCode */
+        ////////////////////////////////* hashCode */
         Object o = new Object();
         System.out.println(o);
         System.out.println(o.hashCode());
         System.out.println(Integer.toHexString(o.hashCode()));  //转16进制
-        System.out.println(new Dog().hashCode());
+//        System.out.println(new Dog().hashCode());
         System.out.println(System.identityHashCode(o));   //不过和 Object.hashcode 不同的是，该方法会无视重写的hashcode
         /** hashCode生成方法 */
         /*  通过当前状态值进行异或（XOR）运算
@@ -38,7 +38,7 @@ public class Demo<T> {
         } */
 
 
-        /**
+        /*
          * boolean中if赋值
          */
         Boolean flag = false;
@@ -46,7 +46,7 @@ public class Demo<T> {
             System.out.println(flag);
         }
 
-        /**
+        /*
          * 基本类型包装初始化值
          */
         Boolean boo = null;
@@ -60,7 +60,7 @@ public class Demo<T> {
         Double dou = null;
         System.out.println(boo + " " + by + " " + sh + " " + integer + " " + lo + " " + ch + " " + fo + " " + dou);
 
-        /**
+        /*
          * 基本类型级限制测试
          */
         int a1 = Integer.MIN_VALUE, a2 = Integer.MAX_VALUE, a3 = (short) a2, a5 = 2100000000;
@@ -91,6 +91,24 @@ public class Demo<T> {
         System.out.println(aaa == bbb + " ");
         System.out.println(cc0 == cc1);
         System.out.println(cc0 == cc2);
+
+        ////////////////////////////////* 移位运算 */
+        int oldCapacity = 3;
+        int i = oldCapacity >> 1;
+        int newCapacity = oldCapacity + (oldCapacity >> 1);
+        int i1 = 55 >> 1;
+        double v = 55 * 1.5;
+        int i2 = 66 >> 1;
+        double i21 = 66 * 1.5;
+        int i3 = 72 >> 1;
+        double i31 = 72 * 1.5;
+        int ssize=3;
+        ssize<<=1;    //左移  6
+        ssize>>>=2;   //右移2位 1
+        ssize>>>=2;   //再右移1位 0
+        int i4=1>>2;
+        System.out.println(ssize);
+
 
     }
 
