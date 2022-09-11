@@ -12,6 +12,9 @@ public class StringTest {
         String c="1.2.";
         String d="1.2.3";
 
+        //equal方法 JDK1.8后，String的底层是 byte[]
+        boolean equals = a.equals(b);
+
         boolean b1 = b.startsWith(a);
         boolean b2 = b.startsWith(c);
         boolean b3 = b.startsWith(d);
