@@ -9,9 +9,14 @@ public class WorkerPool {
         //Get the ThreadFactory implementation to use
         ThreadFactory threadFactory = Executors.defaultThreadFactory();
         //creating the ThreadPoolExecutor
+//        ThreadPoolExecutor executorPool = new ThreadPoolExecutor(
+//                2, 5, 10, TimeUnit.SECONDS,
+//                new ArrayBlockingQueue<Runnable>(2), threadFactory, rejectionHandler);
+
+        //使用SynchronousQueue 并使用CallerRunsPolicy作为拒绝策略，确保任务最终会被执行
         ThreadPoolExecutor executorPool = new ThreadPoolExecutor(
                 2, 5, 10, TimeUnit.SECONDS,
-                new ArrayBlockingQueue<Runnable>(2), threadFactory, rejectionHandler);
+                new SynchronousQueue<>(), threadFactory, new ThreadPoolExecutor.CallerRunsPolicy());
 
         //start the monitoring thread
         MyMonitorThread monitor = new MyMonitorThread(executorPool, 3);
@@ -19,7 +24,7 @@ public class WorkerPool {
         monitorThread.start();
 
         //submit work to the thread pool
-        for(int i=0; i<10; i++){
+        for(int i=0; i<20; i++){
             executorPool.execute(new WorkerThread("cmd"+i));
         }
 
