@@ -50,6 +50,12 @@ public class FunctionDemo {
                 .map(s -> s.length())
                 .collect(Collectors.toList());
 
+        //多测试
+        String stringA = names.stream().collect(StringBuilder::new,
+                        StringBuilder::append,
+                        StringBuilder::append)
+                .toString();
+
         //Predicate<T>：断言接口，用于进行条件判断。
         Predicate<String> isLong = s -> s.length() > 5;
         boolean result1 = isLong.test("example"); // 判断字符串长度是否大于5
@@ -76,5 +82,10 @@ public class FunctionDemo {
         BinaryOperator<Integer> multiply = (x, y) -> x * y;
         int result3 = multiply.apply(3, 4); // 计算两个数的乘积
 
+
+
+        Integer data=5;
+        List<Integer> collect = Stream.generate(() -> data).limit(3).collect(Collectors.toList());
+        System.out.println(collect);
     }
 }
