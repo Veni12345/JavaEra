@@ -26,6 +26,11 @@ public class PriorityQueueTest {
 
     // 使用自定义的Comparator创建PriorityQueue，即最大堆
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(maxHeapComparator);
+/*    PriorityQueue<Integer> maxHeap = new PriorityQueue<>((n1, n2) -> {
+        return n2 - n1;
+    });*/
+
+
 
     /* 2.自实现，使用数组 */
     public static class MaxHeap {
