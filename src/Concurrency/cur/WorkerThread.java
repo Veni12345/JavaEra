@@ -11,7 +11,7 @@ public class WorkerThread implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName()+" Start.Command = "+command);
-        processCommand();
+        processCommand(); //任务执行5s后结束
         System.out.println(Thread.currentThread().getName()+" End.");
     }
 

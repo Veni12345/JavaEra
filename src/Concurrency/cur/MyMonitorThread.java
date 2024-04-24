@@ -2,6 +2,9 @@ package Concurrency.cur;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
+/**
+ * 监控线程：定时检测当前线程池中的线程信息
+ */
 public class MyMonitorThread implements Runnable
 {
     private ThreadPoolExecutor executor;

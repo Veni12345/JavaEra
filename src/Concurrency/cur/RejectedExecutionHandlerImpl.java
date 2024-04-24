@@ -4,6 +4,9 @@ package Concurrency.cur;
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
 
+/**
+ * 自定义拒接策略
+ */
 public class RejectedExecutionHandlerImpl implements RejectedExecutionHandler {
 
     @Override
