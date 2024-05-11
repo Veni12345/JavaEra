@@ -1,6 +1,5 @@
-package IO.socket_SingalThread;
+package IO.socket通信_单线程与多线程;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -12,7 +11,6 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 一个SocketClientRequestThread线程模拟一个客户端请求。
- * @author yinwenjie
  */
 public class SocketClientRequestThread implements Runnable {
 
